@@ -13,6 +13,15 @@
   width: 100%;
 }
 
+/* Change background image for mobile view */
+@media (max-width: 768px) {
+  .homePageIntroCont {
+    background-image: url("../../assets/home/mobile.jpg");
+    background-attachment: scroll;
+    justify-content: start;
+  }
+}
+
 @supports (-webkit-overflow-scrolling: touch) {
   .homePageIntroCont {
     background-attachment: scroll;
