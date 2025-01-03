@@ -24,12 +24,12 @@ const Header: React.FC = () => {
         >
           <div className="w-[80%] h-[10vh] lg:w-[95%] flex justify-evenly items-center">
             <div className="w-[50%] lg:w-[30%] flex justify-start">
-              <h2 className="companyName mt-2 text-[#fcb026]">JP </h2>{" "}
-              <h2 className="companyName mt-2 text-[#fff] ms-2"> Couriers</h2>
+              <h2 className="companyName mt-1 text-[#fcb026]">JP </h2>{" "}
+              <h2 className="companyName mt-1 text-[#fff] ms-2"> Couriers</h2>
             </div>
             <div className="hidden lg:flex w-[90%] justify-center gap-x-10">
               <div
-                className="text-[22px] text-[#ffffff] cursor-pointer font-semibold underline-animation"
+                className="text-[20px] text-[#ffffff] cursor-pointer font-semibold underline-animation"
                 onClick={() => {
                   handleNavigation("/");
                 }}
@@ -37,7 +37,7 @@ const Header: React.FC = () => {
                 Home
               </div>
               <div
-                className="text-[22px] text-[#ffffff] cursor-pointer font-semibold underline-animation"
+                className="text-[20px] text-[#ffffff] cursor-pointer font-semibold underline-animation"
                 onClick={() => {
                   handleNavigation("/about");
                 }}
@@ -46,7 +46,7 @@ const Header: React.FC = () => {
               </div>
 
               <div
-                className="text-[22px] text-[#ffffff] cursor-pointer font-semibold underline-animation"
+                className="text-[20px] text-[#ffffff] cursor-pointer font-semibold underline-animation"
                 onClick={() => {
                   handleNavigation("/contact");
                 }}

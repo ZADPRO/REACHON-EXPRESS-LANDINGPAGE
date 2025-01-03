@@ -23,6 +23,7 @@ import {
 import trust from "../../assets/home/trust.jpg";
 
 import "./Home.css";
+import Testimonials from "../../pages/Testimonials/Testimonials";
 // import FramerHome from "../../pages/FramerHome/FramerHome";
 
 const Home: React.FC = () => {
@@ -382,6 +383,8 @@ const Home: React.FC = () => {
           </details>
         </section>
       </div>
+
+      <Testimonials />
     </motion.div>
   );
 };
