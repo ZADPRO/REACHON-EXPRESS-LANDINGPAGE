@@ -2,7 +2,7 @@ import React from "react";
 
 import vision from "../../assets/home/vision.jpg";
 import mission from "../../assets/home/mission.jpg";
-import logo from "../../assets/home/mission.jpg";
+import logo from "../../assets/home/about.png";
 
 const About: React.FC = () => {
   return (
@@ -16,7 +16,9 @@ const About: React.FC = () => {
             <span className="block mb-4 text-[18px] text-[#000000] font-medium">
               Your Trusted Courier Partner, Every Step of the Way
             </span>
-            <h3 className="text-2xl text-black font-bold">About Us</h3>
+            <h3 className="lg:text-3xl text-2xl text-black font-bold">
+              About Us
+            </h3>
             <p
               className="text-[18px] text-slate-700 my-4 text-justify"
               style={{ textIndent: "2rem" }}
@@ -78,7 +80,7 @@ const About: React.FC = () => {
         </section>
       </div>
 
-      <div className="serviceWorks w-full md:w-6/12 mx-auto my-20">
+      <div className="serviceWorks w-full md:w-6/12 mx-auto my-20 py-20">
         <h2 className="text-[24px] font-bold text-center">
           How Our Courier Services Work
         </h2>
