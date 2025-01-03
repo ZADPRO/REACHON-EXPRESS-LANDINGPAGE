@@ -96,7 +96,7 @@ const Header: React.FC = () => {
 
         {/* Fullscreen Menu for Mobile */}
         <div
-          className={`w-full overflow-y-auto z-50 mt-[70px] fixed top-0 left-0 transition-all duration-500 ease-in-out bg-[#1f1b66] transform ${
+          className={`w-full h-[90vh] overflow-y-auto z-50 mt-[70px] fixed top-0 left-0 transition-all duration-500 ease-in-out bg-[#1f1b66] transform ${
             menuStatus
               ? "translate-x-0 opacity-100 visible"
               : "-translate-x-full opacity-0 invisible"
