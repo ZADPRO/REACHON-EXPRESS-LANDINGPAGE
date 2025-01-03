@@ -1,0 +1,35 @@
+.homePageIntroCont {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../../assets/home/1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 100dvh;
+  width: 100%;
+}
+
+@supports (-webkit-overflow-scrolling: touch) {
+  .homePageIntroCont {
+    background-attachment: scroll;
+  }
+}
+
+.homePageIntroCont::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.homePageIntroCont > * {
+  position: relative;
+  z-index: 2;
+}
