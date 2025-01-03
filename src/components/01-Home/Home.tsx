@@ -4,11 +4,15 @@ import { motion } from "framer-motion";
 
 import {
   BusFront,
+  ChartNetwork,
   ChevronsUp,
+  Container,
   Lock,
   LockKeyhole,
   MapPinCheck,
+  PackageCheck,
   PackageOpen,
+  ShieldCheck,
   TrendingUp,
   Truck,
 } from "lucide-react";
@@ -217,6 +221,166 @@ const Home: React.FC = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="faqSections">
+        <h2 className="text-center text-[28px] font-bold">
+          Frequenty Asked Questions
+        </h2>
+        <section className="w-full my-6 w-full md:w-7/12 mx-auto bg-white divide-y rounded shadow-md divide-slate-200 shadow-slate-200">
+          <details className="p-4 group" open>
+            <summary className="items-center relative flex cursor-pointer list-none gap-4 pr-8 font-medium text-slate-700 transition-colors duration-300 focus-visible:outline-none group-hover:text-slate-900  [&::-webkit-details-marker]:hidden">
+              <PackageCheck />
+              <h2 className="text-[20px]">
+                How can I book a courier service with you?{" "}
+              </h2>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="absolute right-0 w-4 h-4 transition duration-300 top-1 shrink-0 stroke-slate-700 group-open:rotate-45"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                aria-labelledby="title-ac06 desc-ac06"
+              >
+                <title id="title-ac06">Open icon</title>
+                <desc id="desc-ac06">
+                  icon that represents the state of the summary
+                </desc>
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M12 4v16m8-8H4"
+                />
+              </svg>
+            </summary>
+            <p className="mt-4 text-slate-500">
+              You can easily book a courier service through our website or by
+              calling our customer support team.
+            </p>
+          </details>
+          <details className="p-4 group">
+            <summary className="items-center relative flex cursor-pointer list-none gap-4 pr-8 font-medium text-slate-700 transition-colors duration-300 focus-visible:outline-none group-hover:text-slate-900  [&::-webkit-details-marker]:hidden">
+              <TrendingUp />
+              <h2 className="text-[20px]">
+                Do you provide international courier services?{" "}
+              </h2>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="absolute right-0 w-4 h-4 transition duration-300 top-1 shrink-0 stroke-slate-700 group-open:rotate-45"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                aria-labelledby="title-ac08 desc-ac08"
+              >
+                <title id="title-ac08">Open icon</title>
+                <desc id="desc-ac08">
+                  icon that represents the state of the summary
+                </desc>
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M12 4v16m8-8H4"
+                />
+              </svg>
+            </summary>
+            <p className="mt-4 text-slate-500">
+              Yes, we offer international shipping to over 200 destinations
+              globally. Our services include door-to-door delivery, customs
+              clearance, and competitive rates.
+            </p>
+          </details>
+          <details className="p-4 group">
+            <summary className="items-center relative flex cursor-pointer list-none gap-4 pr-8 font-medium text-slate-700 transition-colors duration-300 focus-visible:outline-none group-hover:text-slate-900  [&::-webkit-details-marker]:hidden">
+              <Container />
+              <h2 className="text-[20px]">
+                What is your delivery time for express shipments?{" "}
+              </h2>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="absolute right-0 w-4 h-4 transition duration-300 top-1 shrink-0 stroke-slate-700 group-open:rotate-45"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                aria-labelledby="title-ac10 desc-ac10"
+              >
+                <title id="title-ac10">Open icon</title>
+                <desc id="desc-ac10">
+                  icon that represents the state of the summary
+                </desc>
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M12 4v16m8-8H4"
+                />
+              </svg>
+            </summary>
+            <p className="mt-4 text-slate-500">
+              Our express courier services ensure next-day or same-day delivery,
+              depending on your location.
+            </p>
+          </details>
+          <details className="p-4 group">
+            <summary className="items-center relative flex cursor-pointer list-none gap-4 pr-8 font-medium text-slate-700 transition-colors duration-300 focus-visible:outline-none group-hover:text-slate-900  [&::-webkit-details-marker]:hidden">
+              <ChartNetwork />
+              <h2 className="text-[20px]">How do I track my shipment? </h2>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="absolute right-0 w-4 h-4 transition duration-300 top-1 shrink-0 stroke-slate-700 group-open:rotate-45"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                aria-labelledby="title-ac12 desc-ac12"
+              >
+                <title id="title-ac12">Open icon</title>
+                <desc id="desc-ac12">
+                  icon that represents the state of the summary
+                </desc>
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M12 4v16m8-8H4"
+                />
+              </svg>
+            </summary>
+            <p className="mt-4 text-slate-500">
+              You can track your shipment in real-time using our online parcel
+              tracking system.
+            </p>
+          </details>
+          <details className="p-4 group">
+            <summary className="items-center relative flex cursor-pointer list-none gap-4 pr-8 font-medium text-slate-700 transition-colors duration-300 focus-visible:outline-none group-hover:text-slate-900  [&::-webkit-details-marker]:hidden">
+              <ShieldCheck />
+              <h2 className="text-[20px]">Are my package insured? </h2>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="absolute right-0 w-4 h-4 transition duration-300 top-1 shrink-0 stroke-slate-700 group-open:rotate-45"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                aria-labelledby="title-ac12 desc-ac12"
+              >
+                <title id="title-ac12">Open icon</title>
+                <desc id="desc-ac12">
+                  icon that represents the state of the summary
+                </desc>
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M12 4v16m8-8H4"
+                />
+              </svg>
+            </summary>
+            <p className="mt-4 text-slate-500">
+              Yes, we offer insurance for valuable items. Contact us for more
+              information.
+            </p>
+          </details>
+        </section>
       </div>
     </motion.div>
   );

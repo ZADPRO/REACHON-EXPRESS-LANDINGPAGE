@@ -52,7 +52,8 @@
 }
 
 /* WHY TRUST US */
-.whyTrustUs {
+.whyTrustUs,
+.faqSections {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -69,7 +70,8 @@
 }
 
 @supports (-webkit-overflow-scrolling: touch) {
-  .whyTrustUs {
+  .whyTrustUs,
+  .faqSections {
     background-attachment: scroll;
   }
 }
@@ -78,9 +80,14 @@
   .whyTrustUs {
     height: 100dvh;
   }
+
+  .faqSections {
+    height: 90dvh;
+  }
 }
 
-.whyTrustUs::before {
+.whyTrustUs::before,
+.faqSections::before {
   content: "";
   position: absolute;
   top: 0;
@@ -90,7 +97,8 @@
   z-index: 1;
 }
 
-.whyTrustUs > * {
+.whyTrustUs > *,
+.faqSections > * {
   position: relative;
   z-index: 2;
 }
