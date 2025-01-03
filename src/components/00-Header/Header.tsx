@@ -1,18 +1,24 @@
 import React from "react";
 
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 import "./Header.css";
 
 const Header: React.FC = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+
   const [menuStatus, setMenuStatus] = useState(false);
 
   const handleNavigation = (path: string) => {
     navigate(path);
     window.scrollTo(0, 0);
+    setMenuStatus(false);
   };
+
+  const isActive = (path: string) =>
+    location.pathname === path ? "#fca001" : "#ffffff";
 
   return (
     <div>
@@ -20,7 +26,7 @@ const Header: React.FC = () => {
         <div
           className={`w-full flex ${
             menuStatus ? "fixed z-50" : ""
-          } justify-center items-center h-[80px] bg-[#1f1b66]`}
+          } justify-center items-center h-[70px] bg-[#1f1b66]`}
         >
           <div className="w-[80%] h-[10vh] lg:w-[95%] flex justify-evenly items-center">
             <div className="w-[50%] lg:w-[30%] flex justify-start">
@@ -30,6 +36,7 @@ const Header: React.FC = () => {
             <div className="hidden lg:flex w-[90%] justify-center gap-x-10">
               <div
                 className="text-[20px] text-[#ffffff] cursor-pointer font-semibold underline-animation"
+                style={{ color: isActive("/") }}
                 onClick={() => {
                   handleNavigation("/");
                 }}
@@ -38,6 +45,7 @@ const Header: React.FC = () => {
               </div>
               <div
                 className="text-[20px] text-[#ffffff] cursor-pointer font-semibold underline-animation"
+                style={{ color: isActive("/about") }}
                 onClick={() => {
                   handleNavigation("/about");
                 }}
@@ -47,6 +55,7 @@ const Header: React.FC = () => {
 
               <div
                 className="text-[20px] text-[#ffffff] cursor-pointer font-semibold underline-animation"
+                style={{ color: isActive("/contact") }}
                 onClick={() => {
                   handleNavigation("/contact");
                 }}
@@ -87,7 +96,7 @@ const Header: React.FC = () => {
 
         {/* Fullscreen Menu for Mobile */}
         <div
-          className={`w-full h-[90vh] overflow-y-auto z-50 mt-[10vh] fixed top-0 left-0 transition-all duration-500 ease-in-out bg-white transform ${
+          className={`w-full overflow-y-auto z-50 mt-[70px] fixed top-0 left-0 transition-all duration-500 ease-in-out bg-[#1f1b66] transform ${
             menuStatus
               ? "translate-x-0 opacity-100 visible"
               : "-translate-x-full opacity-0 invisible"
@@ -96,7 +105,8 @@ const Header: React.FC = () => {
           <div className="flex flex-col items-center justify-start h-full">
             <div className="w-[80%] mt-10">
               <div
-                className="text-[22px] cursor-pointer py-3 font-semibold"
+                className="text-[20px] cursor-pointer py-3 font-semibold"
+                style={{ color: isActive("/") }}
                 onClick={() => {
                   handleNavigation("/");
                 }}
@@ -104,7 +114,8 @@ const Header: React.FC = () => {
                 Home{" "}
               </div>
               <div
-                className="text-[22px] cursor-pointer  py-3 font-semibold"
+                className="text-[20px] cursor-pointer  py-3 font-semibold"
+                style={{ color: isActive("/about") }}
                 onClick={() => {
                   handleNavigation("/about");
                 }}
@@ -113,7 +124,8 @@ const Header: React.FC = () => {
               </div>
 
               <div
-                className="text-[22px] cursor-pointer  py-3 font-semibold"
+                className="text-[20px] cursor-pointer  py-3 font-semibold"
+                style={{ color: isActive("/contact") }}
                 onClick={() => {
                   handleNavigation("/contact");
                 }}

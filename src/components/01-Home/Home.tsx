@@ -7,6 +7,7 @@ import {
   ChartNetwork,
   ChevronsUp,
   Container,
+  Headset,
   Lock,
   LockKeyhole,
   MapPinCheck,
@@ -218,6 +219,21 @@ const Home: React.FC = () => {
                 to confidential documents, our expert handling ensures that
                 every package is delivered securely. Our team follows strict
                 quality control measures to ensure safe transport and delivery.
+              </p>
+            </div>
+            <div className="cardContents bg-white text-center flex flex-col items-center flex-1">
+              <Headset
+                size={60}
+                className="bg-[#020756] text-white p-2 rounded-ss-xl rounded-ee-xl"
+              />
+              <h2 className="text-black font-bold text-[22px] my-4">
+                Customer-Centric Support
+              </h2>
+              <p className="text-[16px]">
+                We value customer satisfaction. Our dedicated customer support
+                team is available to assist with inquiries, shipment tracking,
+                and any concerns you may have. We ensure a smooth experience
+                with quick responses and expert guidance every step of the way.
               </p>
             </div>
           </div>
