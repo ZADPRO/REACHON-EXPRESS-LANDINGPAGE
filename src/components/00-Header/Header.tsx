@@ -24,7 +24,8 @@ const Header: React.FC = () => {
         >
           <div className="w-[80%] h-[10vh] lg:w-[95%] flex justify-evenly items-center">
             <div className="w-[50%] lg:w-[30%] flex justify-start">
-              <h2 className="companyName mt-2 text-white">JP Couriers</h2>
+              <h2 className="companyName mt-2 text-[#fcb026]">JP </h2>{" "}
+              <h2 className="companyName mt-2 text-[#fff] ms-2"> Couriers</h2>
             </div>
             <div className="hidden lg:flex w-[90%] justify-center gap-x-10">
               <div

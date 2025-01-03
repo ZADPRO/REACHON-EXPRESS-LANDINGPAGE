@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url("../../assets/home/1.jpg");
+  background-image: url("../../assets/home/new.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -32,4 +32,21 @@
 .homePageIntroCont > * {
   position: relative;
   z-index: 2;
+}
+
+.rightChoice h2,
+.rightChoice p {
+  font-family: "Montserrat", serif;
+}
+
+/* CARD CONTNETS */
+.cardContents h2,
+.cardContents p {
+  font-family: "Montserrat", serif;
+}
+
+.cardContents {
+  border: 1px solid #39282856;
+  padding: 40px 10px;
+  border-radius: 10px;
 }
