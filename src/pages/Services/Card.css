@@ -1,0 +1,85 @@
+.cardContainer {
+  block-size: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  inset-block-start: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  inset-block-start: -25%;
+  block-size: 500px;
+  inline-size: 95vw;
+  border-radius: 25px;
+  padding: 50px;
+  transform-origin: top;
+}
+
+.card h2 {
+  text-align: center;
+  margin: 0;
+  color: white;
+  font-size: 28px;
+}
+
+.card .body {
+  display: flex;
+  color: white;
+  block-size: 100%;
+  margin-block-start: 50px;
+  gap: 50px;
+}
+
+.card .body .description {
+  inline-size: 100%;
+  position: relative;
+  inset-block-start: 10%;
+}
+
+@media (min-width: 640px) {
+  .card .body .description {
+    inline-size: 60%;
+  }
+}
+
+.card .body .description p {
+  text-indent: 2rem;
+}
+
+/* .card .body .description p::first-letter {
+  font-size: 28px;
+  font-family: "Title";
+} */
+
+.card .body .description span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.card .body .description span a {
+  font-size: 12px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.card .body .imageContainer {
+  position: relative;
+  inline-size: 40%;
+  block-size: 100%;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.card .body .imageContainer .inner {
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.card .body .imageContainer img {
+  object-fit: cover;
+}

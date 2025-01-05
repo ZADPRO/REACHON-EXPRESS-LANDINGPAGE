@@ -4,6 +4,8 @@ import vision from "../../assets/home/vision.jpg";
 import mission from "../../assets/home/mission.jpg";
 import logo from "../../assets/home/about.png";
 
+import "./About.css";
+
 const About: React.FC = () => {
   return (
     <div>
@@ -42,10 +44,10 @@ const About: React.FC = () => {
       </div>
       <div className="visionMissionContents bg-white lg:h-screen">
         <section className="flex lg:flex-row flex-col w-full px-8 py-12 items-center gap-10 max-w-5xl mx-auto">
-          <div className="image hidden lg:block">
+          <div className="image missionImage hidden lg:block">
             <img src={vision} alt="" />
           </div>
-          <div>
+          <div data-aos="fade-down">
             <h3 className="text-2xl text-black font-semibold">Our Mission </h3>
             <p
               className="text-base md:text-lg text-slate-700 my-4 md:my-6 text-justify"
@@ -61,7 +63,7 @@ const About: React.FC = () => {
           </div>
         </section>
         <section className="flex lg:flex-row flex-col w-full px-8 py-12 items-center gap-10 max-w-5xl mx-auto">
-          <div>
+          <div data-aos="fade-up">
             <h3 className="text-2xl text-black font-semibold">Our Vision</h3>
             <p
               className="text-base md:text-lg text-slate-700 my-4 md:my-6 text-justify"
@@ -74,82 +76,89 @@ const About: React.FC = () => {
               satisfaction.
             </p>
           </div>
-          <div className="image">
+          <div className="image missionImage">
             <img src={mission} alt="" />
           </div>
         </section>
       </div>
 
-      <div className="serviceWorks w-full md:w-6/12 mx-auto my-20 py-20">
-        <h2 className="text-[24px] font-bold text-center">
-          How Our Courier Services Work
-        </h2>
-        <ul
-          aria-label="Changelog feed"
-          role="feed"
-          className="relative flex flex-col gap-12 py-12 pl-6 text-sm before:absolute before:top-0 before:left-6 before:h-full before:-translate-x-1/2 before:border before:border-dashed before:border-slate-200 after:absolute after:top-6 after:left-6 after:bottom-6 after:-translate-x-1/2 after:border after:border-slate-200"
-        >
-          <li
-            role="article"
-            className="relative pl-6 before:absolute before:left-0 before:top-2 before:z-10 before:h-2 before:w-2 before:-translate-x-1/2 before:rounded-full before:bg-black before:ring-2 before:ring-white"
+      <div className="servicess">
+        <div className="serviceWorks w-full md:w-6/12 mx-auto my-20 py-20">
+          <h2 className="text-[24px] font-bold text-center">
+            How Our Courier Services Work
+          </h2>
+          <ul
+            aria-label="Changelog feed"
+            role="feed"
+            className="relative flex flex-col gap-12 py-12 pl-6 text-sm before:absolute before:top-0 before:left-6 before:h-full before:-translate-x-1/2 before:border before:border-dashed before:border-slate-200 after:absolute after:top-6 after:left-6 after:bottom-6 after:-translate-x-1/2 after:border after:border-slate-200"
           >
-            <div className="flex flex-col flex-1 gap-2">
-              <h4 className="text-base font-medium leading-7 text-[#1f1b66]">
-                Book Your Courier
-              </h4>
-              <p className=" text-slate-500">
-                Book your courier service online through our website or call our
-                customer service team. Choose from a range of options based on
-                your needs, whether it's express delivery or standard shipping.
-              </p>
-            </div>
-          </li>
-          <li
-            role="article"
-            className="relative pl-6 before:absolute before:left-0 before:top-2 before:z-10 before:h-2 before:w-2 before:-translate-x-1/2 before:rounded-full before:bg-black before:ring-2 before:ring-white"
-          >
-            <div className="flex flex-col flex-1 gap-2">
-              <h4 className="text-base font-medium text-[#1f1b66]">
-                Pack Your Items
-              </h4>
-              <p className=" text-slate-500">
-                Ensure your items are packed securely for transit. We provide
-                packaging tips and materials to ensure safe handling during
-                delivery.
-              </p>
-            </div>
-          </li>
-          <li
-            role="article"
-            className="relative pl-6 before:absolute before:left-0 before:top-2 before:z-10 before:h-2 before:w-2 before:-translate-x-1/2 before:rounded-full before:bg-black before:ring-2 before:ring-white"
-          >
-            <div className="flex flex-col flex-1 gap-2">
-              <h4 className="text-base font-medium text-[#1f1b66]">
-                Track Your Shipment
-              </h4>
-              <p className=" text-slate-500">
-                Use our online tracking tool to monitor your shipment in real
-                time. Get updates on the status of your package, so you're
-                always in the loop.
-              </p>
-            </div>
-          </li>
-          <li
-            role="article"
-            className="relative pl-6 before:absolute before:left-0 before:top-2 before:z-10 before:h-2 before:w-2 before:-translate-x-1/2 before:rounded-full before:bg-black before:ring-2 before:ring-white"
-          >
-            <div className="flex flex-col flex-1 gap-2">
-              <h4 className="text-base font-medium text-[#1f1b66]">
-                Delivery & Confirmation{" "}
-              </h4>
-              <p className=" text-slate-500">
-                Once your package is delivered, you will receive confirmation.
-                You can also opt for signature confirmation for added security
-                and peace of mind.
-              </p>
-            </div>
-          </li>
-        </ul>
+            <li
+              role="article"
+              data-aos="fade-up"
+              className="relative pl-6 before:absolute before:left-0 before:top-2 before:z-10 before:h-2 before:w-2 before:-translate-x-1/2 before:rounded-full before:bg-black before:ring-2 before:ring-white"
+            >
+              <div className="flex flex-col flex-1 gap-2">
+                <h4 className="text-base font-medium leading-7 text-[#1f1b66]">
+                  Book Your Courier
+                </h4>
+                <p className=" text-slate-500">
+                  Book your courier service online through our website or call
+                  our customer service team. Choose from a range of options
+                  based on your needs, whether it's express delivery or standard
+                  shipping.
+                </p>
+              </div>
+            </li>
+            <li
+              role="article"
+              data-aos="fade-up"
+              className="relative pl-6 before:absolute before:left-0 before:top-2 before:z-10 before:h-2 before:w-2 before:-translate-x-1/2 before:rounded-full before:bg-black before:ring-2 before:ring-white"
+            >
+              <div className="flex flex-col flex-1 gap-2">
+                <h4 className="text-base font-medium text-[#1f1b66]">
+                  Pack Your Items
+                </h4>
+                <p className=" text-slate-500">
+                  Ensure your items are packed securely for transit. We provide
+                  packaging tips and materials to ensure safe handling during
+                  delivery.
+                </p>
+              </div>
+            </li>
+            <li
+              role="article"
+              data-aos="fade-up"
+              className="relative pl-6 before:absolute before:left-0 before:top-2 before:z-10 before:h-2 before:w-2 before:-translate-x-1/2 before:rounded-full before:bg-black before:ring-2 before:ring-white"
+            >
+              <div className="flex flex-col flex-1 gap-2">
+                <h4 className="text-base font-medium text-[#1f1b66]">
+                  Track Your Shipment
+                </h4>
+                <p className=" text-slate-500">
+                  Use our online tracking tool to monitor your shipment in real
+                  time. Get updates on the status of your package, so you're
+                  always in the loop.
+                </p>
+              </div>
+            </li>
+            <li
+              role="article"
+              data-aos="fade-up"
+              className="relative pl-6 before:absolute before:left-0 before:top-2 before:z-10 before:h-2 before:w-2 before:-translate-x-1/2 before:rounded-full before:bg-black before:ring-2 before:ring-white"
+            >
+              <div className="flex flex-col flex-1 gap-2">
+                <h4 className="text-base font-medium text-[#1f1b66]">
+                  Delivery & Confirmation{" "}
+                </h4>
+                <p className=" text-slate-500">
+                  Once your package is delivered, you will receive confirmation.
+                  You can also opt for signature confirmation for added security
+                  and peace of mind.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   );

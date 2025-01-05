@@ -1,4 +1,8 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
+
+import { projects } from "../../pages/Services/Projects";
+import { useScroll } from "framer-motion";
+import Lenis from "@studio-freight/lenis";
 
 import { motion } from "framer-motion";
 
@@ -25,9 +29,29 @@ import trust from "../../assets/home/trust.jpg";
 
 import "./Home.css";
 import Testimonials from "../../pages/Testimonials/Testimonials";
+import Card from "../../pages/Services/Card";
 // import FramerHome from "../../pages/FramerHome/FramerHome";
 
 const Home: React.FC = () => {
+  const container = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ["start start", "end end"],
+  });
+
+  useEffect(() => {
+    const lenis = new Lenis();
+
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  }, []);
+
+  const totalProjects = projects.length;
+
   return (
     <motion.div>
       <div>
@@ -59,7 +83,10 @@ const Home: React.FC = () => {
           services.
         </p>
         <div className="flex lg:flex-row flex-col gap-8 my-18">
-          <div className="cardContents text-center flex flex-col items-center flex-1">
+          <div
+            className="cardContents text-center flex flex-col items-center flex-1"
+            data-aos="flip-left"
+          >
             <Truck
               size={60}
               className="bg-[#020756] text-white p-2 rounded-ss-xl rounded-ee-xl"
@@ -73,7 +100,10 @@ const Home: React.FC = () => {
               your urgent shipping needs.
             </p>
           </div>
-          <div className="cardContents text-center flex flex-col items-center flex-1">
+          <div
+            className="cardContents text-center flex flex-col items-center flex-1"
+            data-aos="flip-left"
+          >
             <MapPinCheck
               size={60}
               className="bg-[#020756] text-white p-2 rounded-ss-xl rounded-ee-xl"
@@ -87,7 +117,10 @@ const Home: React.FC = () => {
               journey.
             </p>
           </div>
-          <div className="cardContents text-center flex flex-col items-center flex-1">
+          <div
+            className="cardContents text-center flex flex-col items-center flex-1"
+            data-aos="flip-left"
+          >
             <Lock
               size={60}
               className="bg-[#020756] text-white p-2 rounded-ss-xl rounded-ee-xl"
@@ -144,7 +177,10 @@ const Home: React.FC = () => {
           </h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 my-10 flex justify-center">
-            <div className="cardContents bg-white text-center flex flex-col items-center flex-1">
+            <div
+              className="cardContents bg-white text-center flex flex-col items-center flex-1"
+              data-aos="flip-left"
+            >
               <PackageOpen
                 size={60}
                 className="bg-[#020756] text-white p-2 rounded-ss-xl rounded-ee-xl"
@@ -159,7 +195,10 @@ const Home: React.FC = () => {
                 timely delivery to both urban and remote locations.
               </p>
             </div>
-            <div className="cardContents bg-white text-center flex flex-col items-center flex-1">
+            <div
+              className="cardContents bg-white text-center flex flex-col items-center flex-1"
+              data-aos="flip-left"
+            >
               <BusFront
                 size={60}
                 className="bg-[#020756] text-white p-2 rounded-ss-xl rounded-ee-xl"
@@ -174,7 +213,10 @@ const Home: React.FC = () => {
                 your shipping experience simple and affordable.
               </p>
             </div>
-            <div className="cardContents bg-white text-center flex flex-col items-center flex-1">
+            <div
+              className="cardContents bg-white text-center flex flex-col items-center flex-1"
+              data-aos="flip-left"
+            >
               <ChevronsUp
                 size={60}
                 className="bg-[#020756] text-white p-2 rounded-ss-xl rounded-ee-xl"
@@ -190,7 +232,10 @@ const Home: React.FC = () => {
                 shipment arrives on time, every time.
               </p>
             </div>
-            <div className="cardContents bg-white text-center flex flex-col items-center flex-1">
+            <div
+              className="cardContents bg-white text-center flex flex-col items-center flex-1"
+              data-aos="flip-left"
+            >
               <TrendingUp
                 size={60}
                 className="bg-[#020756] text-white p-2 rounded-ss-xl rounded-ee-xl"
@@ -206,7 +251,10 @@ const Home: React.FC = () => {
                 of the way.
               </p>
             </div>
-            <div className="cardContents bg-white text-center flex flex-col items-center flex-1">
+            <div
+              className="cardContents bg-white text-center flex flex-col items-center flex-1"
+              data-aos="flip-left"
+            >
               <LockKeyhole
                 size={60}
                 className="bg-[#020756] text-white p-2 rounded-ss-xl rounded-ee-xl"
@@ -221,7 +269,10 @@ const Home: React.FC = () => {
                 quality control measures to ensure safe transport and delivery.
               </p>
             </div>
-            <div className="cardContents bg-white text-center flex flex-col items-center flex-1">
+            <div
+              className="cardContents bg-white text-center flex flex-col items-center flex-1"
+              data-aos="flip-left"
+            >
               <Headset
                 size={60}
                 className="bg-[#020756] text-white p-2 rounded-ss-xl rounded-ee-xl"
@@ -237,6 +288,28 @@ const Home: React.FC = () => {
               </p>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div className="servic">
+        <h2 className="text-center mt-10 text-[28px] font-bold">
+          Our Range of Courier Services in India
+        </h2>
+        <div ref={container} className="projectsContainer">
+          {projects.map((project, i) => {
+            const targetScale = 1 - (totalProjects - i) * 0.05;
+
+            return (
+              <Card
+                key={`p_${i}`}
+                i={i}
+                {...project}
+                progress={scrollYProgress}
+                range={[i * (1 / totalProjects), (i + 1) * (1 / totalProjects)]}
+                targetScale={targetScale}
+              />
+            );
+          })}
         </div>
       </div>
 

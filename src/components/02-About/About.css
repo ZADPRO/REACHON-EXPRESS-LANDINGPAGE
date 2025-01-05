@@ -1,0 +1,12 @@
+.servicess {
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, #0d83fd, transparent 95%) 50%,
+    color-mix(in srgb, #0d83fd, transparent 98%) 25%,
+    transparent 50%
+  );
+}
+
+.missionImage img {
+  border-radius: 50%;
+}

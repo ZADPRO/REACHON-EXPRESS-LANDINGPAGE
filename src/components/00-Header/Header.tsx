@@ -60,7 +60,7 @@ const Header: React.FC = () => {
                   handleNavigation("/contact");
                 }}
               >
-                Contact
+                Customer Care
               </div>
             </div>
 
@@ -130,7 +130,7 @@ const Header: React.FC = () => {
                   handleNavigation("/contact");
                 }}
               >
-                Contact
+                Customer Care
               </div>
             </div>
           </div>
