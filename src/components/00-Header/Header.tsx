@@ -30,7 +30,7 @@ const Header: React.FC = () => {
           } justify-center items-center h-[70px] bg-[#1f1b66]`}
         >
           <div className="w-[85%] h-[10vh] lg:w-[100%] flex justify-between items-center">
-            <div className="w-[50%] lg:w-[30%] flex justify-start">
+            <div className="w-[50%] lg:w-[13%] flex justify-start ms-[30px]">
               <img src={logo} alt="Reachon Express" />
             </div>
             <div className="hidden lg:flex w-[90%] justify-center gap-x-10">
