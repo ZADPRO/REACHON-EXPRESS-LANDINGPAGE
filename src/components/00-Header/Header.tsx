@@ -2,6 +2,7 @@ import React from "react";
 
 import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import logo from "../../assets/logo/logo.svg";
 
 import "./Header.css";
 
@@ -28,10 +29,9 @@ const Header: React.FC = () => {
             menuStatus ? "fixed z-50" : ""
           } justify-center items-center h-[70px] bg-[#1f1b66]`}
         >
-          <div className="w-[80%] h-[10vh] lg:w-[95%] flex justify-evenly items-center">
+          <div className="w-[85%] h-[10vh] lg:w-[100%] flex justify-between items-center">
             <div className="w-[50%] lg:w-[30%] flex justify-start">
-              <h2 className="companyName mt-1 text-[#fcb026]">Reachon </h2>{" "}
-              <h2 className="companyName mt-1 text-[#fff] ms-2"> Express</h2>
+              <img src={logo} alt="Reachon Express" />
             </div>
             <div className="hidden lg:flex w-[90%] justify-center gap-x-10">
               <div

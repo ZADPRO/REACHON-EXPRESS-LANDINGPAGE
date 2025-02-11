@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url("../../assets/home/new.jpg");
+  background-image: url("../../assets/home/homeBgImg.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -16,7 +16,7 @@
 /* Change background image for mobile view */
 @media (max-width: 768px) {
   .homePageIntroCont {
-    background-image: url("../../assets/home/mobile.jpg");
+    background-image: url("../../assets/home/homeMobile1.jpg");
     background-attachment: scroll;
     justify-content: start;
     height: 100vh;
