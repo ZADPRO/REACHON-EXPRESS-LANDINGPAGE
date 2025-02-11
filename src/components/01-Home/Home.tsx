@@ -207,8 +207,8 @@ const Home: React.FC = () => {
                 Affordable & Transparent Rates
               </h2>
               <p className="text-[16px]">
-                Looking for cost-effective courier services in India? At JP
-                Couriers, we offer competitive pricing without compromising on
+                Looking for cost-effective courier services in India? At Reachon
+                Express, we offer competitive pricing without compromising on
                 quality. Enjoy no hidden fees and transparent charges, making
                 your shipping experience simple and affordable.
               </p>

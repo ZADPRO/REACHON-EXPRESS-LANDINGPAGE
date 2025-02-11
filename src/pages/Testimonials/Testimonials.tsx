@@ -76,7 +76,7 @@ const Testimonials: React.FC = () => {
                             className="text-justify"
                             style={{ textIndent: "2rem" }}
                           >
-                            "I've been using JP Couriers for my business
+                            "I've been using Reachon Express for my business
                             deliveries, and I couldn't be happier. They offer
                             fast, reliable service and excellent customer
                             support."
