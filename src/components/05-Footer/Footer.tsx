@@ -142,9 +142,8 @@ const Footer: React.FC = () => {
                       href="javascript:void(0)"
                       className="transition-colors text-black text-[17px] duration-300 hover:text-[#1f1b66] hover:font-bold focus:text-[#1f1b66]"
                     >
-                      {" "}
-                      No 118 Gandhiji Road, Erode HO, Erode - 638001 (Near
-                      Railway Station){" "}
+                      Reachon express transport india pvt Ltd, D.No.62,
+                      Balasubburayalu street, erode-638001.
                     </a>
                   </li>
                 </ul>
