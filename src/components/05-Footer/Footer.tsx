@@ -125,7 +125,7 @@ const Footer: React.FC = () => {
                       className="transition-colors text-black text-[17px] duration-300 hover:text-[#1f1b66] hover:font-bold focus:text-[#1f1b66]"
                     >
                       {" "}
-                      +91 94438 94875
+                      +91 99447 46779
                     </a>
                   </li>
                   <li className="mb-2 leading-6">

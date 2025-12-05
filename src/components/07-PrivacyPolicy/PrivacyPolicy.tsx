@@ -108,7 +108,7 @@ const PrivacyPolicy: React.FC = () => {
               <strong>Email:</strong> reachonexpress@gmail.com
             </li>
             <li>
-              <strong>Phone:</strong> +91 94438 94875
+              <strong>Phone:</strong> +91 99447 46779
             </li>
             <li>
               <strong>Address:</strong> No 118 Gandhiji Road, Erode HO, Erode -
